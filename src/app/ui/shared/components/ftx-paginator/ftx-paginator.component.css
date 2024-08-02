@@ -1,0 +1,17 @@
+
+@media only screen and (max-width: 860px) {
+    ::ng-deep .mat-mdc-paginator-range-actions {
+        width: 100%;
+        display: flow !important;
+        text-align: center;
+    }    
+
+    ::ng-deep .mat-mdc-paginator-page-size {
+        display: unset !important;
+        align-items: baseline;
+        margin-right: 8px;
+        width: 100%;
+        text-align: center;
+    }
+    
+  }

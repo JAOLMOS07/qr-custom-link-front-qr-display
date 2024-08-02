@@ -1,0 +1,30 @@
+<div
+  class="col-md-5 col-lg-5 col-12 col-sm-12"
+  style="margin: 0 auto; padding: 0px !important"
+>
+  @if(!isLoading){
+  <div>
+    <app-header
+      [languaje]="infoProduct?.languages"
+      [logoUrl]="infoProduct?.logo"
+      (eventChangeLanguage)="changeLanguage($event)"
+    ></app-header>
+    <section class="content">
+      <app-detail-product
+        [photos]="infoProduct?.carousel"
+        [data]="title"
+      ></app-detail-product>
+
+      <app-sesions [datas]="this.contenido"></app-sesions>
+    </section>
+    <section class="footer">
+      <app-footer [currentLanguaje]="currentLanguaje"></app-footer>
+    </section>
+  </div>
+  }@else{
+  <div class="d-flex center-cont p-5 justify-content-center align-items-center">
+    <app-ftx-spinner />
+  </div>
+
+  }
+</div>

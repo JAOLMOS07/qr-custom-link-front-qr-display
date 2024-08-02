@@ -1,0 +1,16 @@
+<div class="custom-input-container textDiv">
+  <label *ngIf="viewLabel" class="labelInput">{{ label }}</label>
+  <input
+    class="form-control rounded-pill custom-input"
+    [formControl]="control"
+    [placeholder]="placeholder"
+  />
+
+  @if (viewError){
+  <div class="col-md-12 col-sm-12">
+    @if (control.invalid && control.touched) {
+    <mat-error class="invalid-feedback">{{ getErrorMessage() }} </mat-error>
+    }
+  </div>
+  }
+</div>
